@@ -1,4 +1,6 @@
 import express from 'express'
+import 'dotenv/config'
+import mongoConfig from './config.js'
 
 const app = express()
 
@@ -10,4 +12,5 @@ app.get('/', (req, res) => {
 
 app.listen(port, ()=>{
     console.log('Listening on port: ' + port)
+    mongoConfig()
 })
